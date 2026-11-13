@@ -1,0 +1,22 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm test
+      - name: Sample outputs are up to date
+        run: |
+          node dist/src/cli.js assess examples/services.json > /tmp/s.md; diff /tmp/s.md docs/sample-review.md
+          test "$(node dist/src/cli.js assess examples/services.json --fail-below-required >/dev/null; echo $?)" = "1"

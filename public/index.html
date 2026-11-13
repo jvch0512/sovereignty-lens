@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>sovereignty-lens</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>sovereignty-lens</h1>
+    <p class="sub">Describe your cloud services in JSON. Get an indicative SEAL level for each of the eight sovereignty objectives, a weighted score, GDPR Chapter V and extraterritorial exposure flags, DORA exit checks and sovereignty-washing warnings. Runs in this tab, nothing is uploaded.</p>
+  </div>
+  <button type="button" id="sample">Load sample</button>
+</header>
+<main>
+  <div class="panel">
+    <h2>Services JSON</h2>
+    <textarea id="inv" rows="14" spellcheck="false"></textarea>
+    <p class="hint">An indicative screening aid shaped after the EU Cloud Sovereignty Framework. It is not an official SEAL rating, and the answers are only as good as the facts you enter.</p>
+  </div>
+  <div id="out"></div>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

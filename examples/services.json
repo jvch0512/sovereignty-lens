@@ -1,0 +1,28 @@
+{
+  "organisation": "Acme Bank (sample)",
+  "financialEntity": true,
+  "services": [
+    { "name": "HyperCloud Frankfurt IaaS", "provider": "HyperCloud", "category": "iaas", "sensitivity": "high", "critical": true,
+      "hqCountry": "IE", "parentCountry": "US", "euLicensedOperator": false, "hostingCountries": ["DE"], "supportCountries": ["DE", "US", "IN"], "supportApproval": false,
+      "keys": "provider", "transfer": "dpf", "contractLaw": "IE", "exit": "documented", "openStandards": false, "certifications": ["iso27001", "c5"], "socCountry": "US",
+      "marketedAsSovereign": true, "subprocessors": [{ "name": "ChipOps", "country": "US", "critical": true }] },
+    { "name": "HyperCloud Sovereign Edition", "provider": "HyperCloud", "category": "iaas", "sensitivity": "high", "critical": true,
+      "hqCountry": "DE", "parentCountry": "US", "euLicensedOperator": true, "hostingCountries": ["DE"], "supportCountries": ["DE"], "supportApproval": true,
+      "keys": "external-eu-hsm", "transfer": "none", "contractLaw": "DE", "exit": "documented", "openStandards": true, "certifications": ["iso27001", "c5"], "socCountry": "DE",
+      "marketedAsSovereign": true, "subprocessors": [{ "name": "ChipOps", "country": "US", "critical": false }] },
+    { "name": "Nordhost Managed Kubernetes", "provider": "Nordhost", "category": "paas", "sensitivity": "high", "critical": true,
+      "hqCountry": "FR", "parentCountry": "FR", "nonEuOwnershipPct": 8, "hostingCountries": ["FR", "DE"], "supportCountries": ["FR"],
+      "keys": "hyok", "transfer": "none", "contractLaw": "FR", "exit": "tested", "openStandards": true, "certifications": ["iso27001", "secnumcloud"], "socCountry": "FR", "sustainability": true,
+      "subprocessors": [{ "name": "Energia FR", "country": "FR", "critical": false }] },
+    { "name": "OfficeSuite SaaS", "provider": "OfficeSuite", "category": "saas", "sensitivity": "medium", "critical": false,
+      "hqCountry": "US", "parentCountry": "US", "hostingCountries": ["IE", "NL"], "supportCountries": ["US", "IE"], "supportApproval": true,
+      "keys": "byok", "transfer": "dpf", "contractLaw": "IE", "exit": "documented", "openStandards": false, "certifications": ["iso27001"], "socCountry": "US",
+      "subprocessors": [{ "name": "AnalyticsCo", "country": "US", "critical": false }] },
+    { "name": "CRM Cloud", "provider": "CRM Cloud", "category": "saas", "sensitivity": "medium", "critical": false,
+      "hqCountry": "US", "parentCountry": "US", "hostingCountries": ["US"], "supportCountries": ["US"],
+      "keys": "provider", "transfer": "sccs", "contractLaw": "US", "exit": "none", "openStandards": false, "certifications": ["iso27001"], "socCountry": "US", "subprocessors": [] },
+    { "name": "Alpine Backup", "provider": "Alpine Backup", "category": "backup", "sensitivity": "low", "critical": false,
+      "hqCountry": "CH", "parentCountry": "CH", "hostingCountries": ["CH"], "supportCountries": ["CH"],
+      "keys": "byok", "transfer": "adequacy", "contractLaw": "CH", "exit": "documented", "openStandards": true, "certifications": ["iso27001"], "socCountry": "CH", "subprocessors": [] }
+  ]
+}
